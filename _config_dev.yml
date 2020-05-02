@@ -1,0 +1,45 @@
+# Site settings
+name: Yash Vekaria
+title: Yash Vekaria | Front End Software Engineer
+description: Design-minded front-end software engineer focused on building beautiful interfaces and experiences
+url: https://yash.vekaria.in
+baseurl: ''
+email: yashvekaria@gmail.com
+#cover: https://bchiang7.github.io/img/og.png
+logo: https://bchiang7.github.io/img/emojis/technologist.png
+#resume: https://bchiang7.github.io/resume.pdf
+social:
+  - title: email
+    url: mailto:brittany.chiang@gmail.com
+  - title: twitter
+    url: https://twitter.com/yashvekaria
+  - title: instagram
+    url: https://www.instagram.com/yashvekaria/
+  # - title: codepen
+  #  url: http://codepen.io/bchiang7
+  - title: github
+    url: https://github.com/yashvekaria
+  - title: linkedin
+    url: https://www.linkedin.com/in/yash-vekaria-71459025/
+
+# Build settings
+markdown: kramdown
+
+exclude:
+  - 'Gemfile'
+  - 'Gemfile.lock'
+  - '*.gemspec'
+  - 'README.md'
+  - 'node_modules'
+  - 'build'
+  - 'gulpfile.js'
+  - 'package.json'
+
+keep_files:
+  - 'CNAME'
+  - '.git'
+  - '.gitignore'
+
+plugins_dir:
+  - jekyll-minifier
+  - jekyll-sitemap

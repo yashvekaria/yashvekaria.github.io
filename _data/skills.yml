@@ -1,0 +1,24 @@
+languages:
+  - item: JavaScript (ES6)
+  - item: TypeScript
+  - item: HTML
+  - item: CSS/Sass
+
+frameworks:
+  - item: React
+  - item: React Native
+  - item: Jekyll
+  - item: Angular 1
+
+tools:
+  - item: Git & Gitlab
+  - item: Gulp, Grunt
+  - item: Chrome DevTools
+  - item: Postman
+# design:
+#   - item: Sketch
+#   - item: InDesign
+#   - item: InVision
+#   - item: Prototyping
+#   - item: Wireframing
+#   - item: User Testing
