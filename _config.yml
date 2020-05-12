@@ -2,11 +2,11 @@
 name: Yash Vekaria
 title: Yash Vekaria | Front End Software Engineer
 description: Design-minded front-end software engineer focused on building beautiful interfaces and experiences
-url: https://yash.vekaria.in
+url: https://vekaria.in
 baseurl: ""
 email: yashvekaria@gmail.com
 #cover: https://bchiang7.github.io/img/og.png
-logo: https://bchiang7.github.io/img/emojis/technologist.png
+logo: https://yashvekaria.github.io/img/emojis/technologist.png
 #resume: https://bchiang7.github.io/resume.pdf
 social:
   - title: email
@@ -25,15 +25,9 @@ social:
 # Build settings
 markdown: kramdown
 
-exclude:
-  - "Gemfile"
-  - "Gemfile.lock"
-  - "*.gemspec"
-  - "README.md"
-  - "node_modules"
-  - "build"
-  - "gulpfile.js"
-  - "package.json"
+paginate: 10
+paginate_path: "/blog/:num/"
+permalink: pretty
 
 keep_files:
   - "CNAME"
@@ -43,3 +37,15 @@ keep_files:
 plugins_dir:
   - jekyll-minifier
   - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+exclude:
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "*.gemspec"
+  - "README.md"
+  - "node_modules"
+  - "build"
+  - "gulpfile.js"
+  - "package.json"
