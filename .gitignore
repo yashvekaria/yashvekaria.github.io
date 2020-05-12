@@ -2,11 +2,11 @@
 node_modules
 package-lock.json
 
-# testing
-/coverage
+_site
+.sass-cache
+.jekyll-metadata
+/.bundle
 
-# production
-/build
 
 # misc
 .DS_Store

@@ -3,7 +3,7 @@ name: Yash Vekaria
 title: Yash Vekaria | Front End Software Engineer
 description: Design-minded front-end software engineer focused on building beautiful interfaces and experiences
 url: https://vekaria.in
-baseurl: ""
+baseurl: "" # the subpath of your site, e.g. /blog
 email: yashvekaria@gmail.com
 #cover: https://bchiang7.github.io/img/og.png
 logo: https://yashvekaria.github.io/img/emojis/technologist.png
