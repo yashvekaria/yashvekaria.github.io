@@ -55,7 +55,7 @@
     font-weight: 300;
     .wave-hand {
       //background-image: url('../img/emojis/wave.png');
-      background-image: url('../img/emojis/foldedhands.png');
+      //background-image: url("../img/emojis/foldedhands.png");
       margin-left: 10px;
       cursor: pointer;
 
@@ -99,10 +99,14 @@
       font-weight: 700;
     }
     .technologist {
-      background-image: url('../img/emojis/technologist.png');
+      background-image: url("../img/emojis/technologist.png");
+      margin-right: 5px;
     }
   }
   &__contact {
+    display: flex;
+    align-items: center;
+
     font-size: 1.25rem;
     font-weight: 400;
     @include phablet {
@@ -110,15 +114,16 @@
     }
     .emoji {
       &.pointer {
-        background-image: url('../img/emojis/pointright.png');
-        width: 30px;
-        height: 30px;
-        margin: 0 5px;
-        vertical-align: text-bottom;
-        @include phablet {
-          width: 25px;
-          height: 25px;
-        }
+        margin: 0 10px 0 5px;
+        // background-image: url("../img/emojis/pointright.png");
+        // width: 30px;
+        // height: 30px;
+        // margin: 0 5px;
+        // vertical-align: text-bottom;
+        // @include phablet {
+        //   width: 25px;
+        //   height: 25px;
+        // }
       }
     }
     .highlight-link {

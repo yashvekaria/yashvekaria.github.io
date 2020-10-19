@@ -1,19 +1,16 @@
 {
-  "name": "brittanychiang.com",
-  "version": "0.0.0",
-  "description": "Design-minded front-end software engineer focused on building beautiful interfaces and experiences",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bchiang7/bchiang7.github.io"
-  },
-  "homepage": "https://github.com/bchiang7/bchiang7.github.io",
+  "name": "yash.vekaria.com",
+  "version": "0.1.0",
   "main": "gulpfile.js",
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "start": "gulp serve",
     "build": "gulp build"
   },
-  "author": "Brittany Chiang",
-  "license": "ISC",
+  "author": "Yash Vekaria",
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
+  },
   "devDependencies": {
     "@nuscout/eslint-config": "^0.2.1",
     "browser-sync": "^2.26.7",
@@ -24,5 +21,8 @@
     "gulp-imagemin": "6.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "3.0.2"
-  }
+  },
+  "browserslist": [
+    "> 1%"
+  ]
 }

@@ -33,11 +33,11 @@ body {
     }
     .switch-wrapper {
       .sun {
-        background: url('../img/switch/sun-white.svg') no-repeat center;
+        background: url("../img/switch/sun-white.svg") no-repeat center;
         background-size: 100%;
       }
       .moon {
-        background: url('../img/switch/moon-white.svg') no-repeat center;
+        background: url("../img/switch/moon-white.svg") no-repeat center;
         background-size: 100%;
       }
     }
@@ -155,7 +155,7 @@ strong {
         width: 100%;
         height: 1px;
         background: $black;
-        content: '';
+        content: "";
         opacity: 0;
         transition: height 0.3s, opacity 0.3s, transform 0.3s;
         transform: translateY(-5px);
@@ -184,8 +184,8 @@ strong {
     position: relative;
     bottom: 2px;
     margin-left: 15px;
-    content: '';
-    background: url('../img/arrow.png') no-repeat center;
+    content: "";
+    background: url("../img/arrow.png") no-repeat center;
     background-size: 100%;
     width: 15px;
     height: 15px;
@@ -198,7 +198,7 @@ strong {
 }
 
 .small {
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
   font-size: 0.85rem;
   display: inline-block;
   margin-top: 15px;
@@ -218,6 +218,7 @@ strong {
   right: 10px;
   cursor: pointer;
   display: none;
+  font-size: 22px;
   @include desktop {
     bottom: 20px;
     right: 7px;
@@ -232,9 +233,9 @@ strong {
   &:focus {
     transform: translateY(-10px);
   }
-  img {
-    width: 100%;
-  }
+  // img {
+  //   width: 100%;
+  // }
 }
 
 .waypoint {
