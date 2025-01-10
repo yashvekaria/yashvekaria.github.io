@@ -89,8 +89,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
-        <div id="site">{children}</div>
+      <body className="bg-bg-light dark:bg-bg-dark text-text-light dark:text-text-dark transition-colors duration-250 ease-custom">
+        {children}
       </body>
     </html>
   );
