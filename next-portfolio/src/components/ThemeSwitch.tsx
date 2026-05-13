@@ -46,7 +46,7 @@ const ThemeSwitch = () => {
   if (!mounted) return null;
 
   return (
-    <div className="flex justify-center items-center absolute top-[20px] right-[30px] z-50 sm:top-[10px] sm:right-[20px]">
+    <div className="flex justify-center items-center absolute top-[30px] right-[30px] z-50 sm:top-[20px] sm:right-[20px]">
       <div className="w-[17px] h-[17px] bg-[url('/img/switch/sun.svg')] dark:bg-[url('/img/switch/sun-white.svg')] bg-no-repeat bg-center bg-contain" />
       <div className="mx-[10px]">
         <input
@@ -60,7 +60,7 @@ const ThemeSwitch = () => {
           htmlFor="switch"
           className={`cursor-pointer indent-[-9999px] w-[45px] h-[25px] bg-[#888] block rounded-full relative transition-all duration-250 ease-custom
             after:content-[''] after:absolute after:top-[3px] after:left-[3px] after:w-[19px] after:h-[19px] after:bg-white after:rounded-full after:transition-all after:duration-250 after:ease-custom
-            peer-checked:bg-[#64ffda] peer-checked:after:left-[calc(100%-3px)] peer-checked:after:translate-x-[-100%]`}
+            peer-checked:bg-[#bae67e] peer-checked:after:left-[calc(100%-3px)] peer-checked:after:translate-x-[-100%]`}
         >
           Toggle
         </label>

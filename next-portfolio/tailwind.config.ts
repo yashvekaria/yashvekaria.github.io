@@ -30,9 +30,9 @@ const config: Config = {
             dark: "#64ffda",
           },
         },
-        switch: {
-          light: "#83D8FF",
-          dark: "#64ffda",
+        nav: {
+          light: "rgba(255, 255, 255, 0.8)",
+          dark: "rgba(10, 25, 47, 0.8)",
         },
       },
       maxWidth: {
@@ -81,6 +81,9 @@ const config: Config = {
       },
       transitionTimingFunction: {
         custom: "cubic-bezier(0.645, 0.045, 0.355, 1)",
+      },
+      backdropBlur: {
+        sm: "5px",
       },
     },
   },
