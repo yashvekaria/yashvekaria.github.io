@@ -4,8 +4,7 @@
 /node_modules
 /.pnp
 
-# Re-include the lockfile (the repo root .gitignore excludes it) so CI can
-# run reproducible `npm ci` installs.
+# Keep the lockfile committed for reproducible `npm ci` installs in CI.
 !package-lock.json
 .pnp.*
 .yarn/*

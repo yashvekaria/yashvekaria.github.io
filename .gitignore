@@ -1,12 +1,5 @@
 # dependencies
 node_modules
-package-lock.json
-
-_site
-.sass-cache
-.jekyll-metadata
-/.bundle
-
 
 # misc
 .DS_Store

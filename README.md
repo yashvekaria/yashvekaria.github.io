@@ -1,17 +1,28 @@
-# v3
+# yash.vekaria.in
 
-Third iteration of my personal website built with Jekyll.
+Personal website of Yash Vekaria — a design-minded front-end software engineer.
 
-> 📢 **PSA for those who want to fork or copy this repo and use it for their own site:**
->
-> Please be a decent person and give me proper credit by linking back to my website! Refer to this handy [quora post](https://www.quora.com/Is-it-bad-to-copy-other-peoples-code) if you're not sure.
+Built with [Next.js](https://nextjs.org) (App Router, static export) and
+[Tailwind CSS](https://tailwindcss.com), deployed to GitHub Pages.
 
-## Dependencies
+The app lives in [`nextapp/`](./nextapp). On every push to `master` that
+touches `nextapp/`, GitHub Actions builds the static export and publishes it to
+GitHub Pages (see [`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml)).
 
-- [Gulp](https://gulpjs.com/)
+## Getting started
 
-## Getting Started
+```bash
+cd nextapp
+npm install
+npm run dev      # http://localhost:3000
+```
 
-1.  `gem install jekyll sass bundler jekyll-minifier jekyll-sitemap`
-2.  `npm install`
-3.  `npm start`
+## Build
+
+```bash
+cd nextapp
+npm run build    # static export to nextapp/out
+```
+
+> 📢 **PSA for those who want to fork or copy this repo for their own site:**
+> Please be a decent person and give proper credit by linking back to my website.
