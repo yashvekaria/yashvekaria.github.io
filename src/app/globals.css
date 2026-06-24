@@ -3,35 +3,11 @@
 /* Class-based dark mode — ThemeSwitch toggles `.dark` on <html>. */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Apercu — self-hosted via /public/fonts. */
-@font-face {
-  font-family: "Apercu";
-  src:
-    url("/fonts/apercu/Apercu-Regular.woff2") format("woff2"),
-    url("/fonts/apercu/Apercu-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Apercu";
-  src:
-    url("/fonts/apercu/Apercu-Medium.woff2") format("woff2"),
-    url("/fonts/apercu/Apercu-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Apercu";
-  src:
-    url("/fonts/apercu/Apercu-Bold.woff2") format("woff2"),
-    url("/fonts/apercu/Apercu-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+/* Work Sans is loaded and self-hosted by next/font (see layout.tsx). Map
+   Tailwind's font-sans utility onto the CSS variable next/font injects. Using
+   `@theme inline` keeps the var() reference instead of resolving it at build. */
+@theme inline {
+  --font-sans: var(--font-work-sans), -apple-system, system-ui, sans-serif;
 }
 
 @theme {
@@ -65,9 +41,6 @@
   /* Spacing (py-section / py-section-mobile) */
   --spacing-section: 120px;
   --spacing-section-mobile: 70px;
-
-  /* Font family */
-  --font-sans: "Apercu", -apple-system, system-ui, sans-serif;
 
   /* Easing */
   --ease-custom: cubic-bezier(0.645, 0.045, 0.355, 1);

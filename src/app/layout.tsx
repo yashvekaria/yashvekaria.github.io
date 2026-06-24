@@ -1,6 +1,17 @@
 import type { Metadata, Viewport } from "next";
+import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import { SITE, STRUCTURED_DATA } from "@/lib/site";
+
+// Self-hosted at build time by next/font — no runtime requests to Google.
+// `preload` injects <link rel="preload"> for the font with crossorigin, and
+// the fallback-metric adjustment (on by default) prevents layout shift.
+const workSans = Work_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
+  variable: "--font-work-sans",
+});
 
 export const viewport: Viewport = {
   themeColor: [
@@ -98,7 +109,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={workSans.variable} suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{ __html: themeScript }}
