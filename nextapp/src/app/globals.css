@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+/* Class-based dark mode — ThemeSwitch toggles `.dark` on <html>. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Apercu — self-hosted via /public/fonts. */
+@font-face {
+  font-family: "Apercu";
+  src:
+    url("/fonts/apercu/Apercu-Regular.woff2") format("woff2"),
+    url("/fonts/apercu/Apercu-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Apercu";
+  src:
+    url("/fonts/apercu/Apercu-Medium.woff2") format("woff2"),
+    url("/fonts/apercu/Apercu-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Apercu";
+  src:
+    url("/fonts/apercu/Apercu-Bold.woff2") format("woff2"),
+    url("/fonts/apercu/Apercu-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* Colors */
+  --color-bg-light: #ffffff;
+  --color-bg-dark: #0a192f;
+  --color-text-light: #1d1d1f;
+  --color-text-dark: #e6f1ff;
+  --color-text-secondary-light: #36363a;
+  --color-text-secondary-dark: #8892b0;
+  --color-link-light: #007bff;
+  --color-link-dark: #64ffda;
+  --color-link-hover-light: #0056b3;
+  --color-link-hover-dark: #64ffda;
+  --color-nav-light: rgba(255, 255, 255, 0.8);
+  --color-nav-dark: rgba(10, 25, 47, 0.8);
+
+  /* Max widths (max-w-container / max-w-content) */
+  --container-container: 1440px;
+  --container-content: 700px;
+
+  /* Font sizes */
+  --text-xxs: 1.4rem;
+  --text-xs: 1.5rem;
+  --text-sm: 1.75rem;
+  --text-base: 2rem;
+  --text-lg: 2.25rem;
+  --text-xl: 2.5rem;
+  --text-contact: 1.25rem;
+
+  /* Spacing (py-section / py-section-mobile) */
+  --spacing-section: 120px;
+  --spacing-section-mobile: 70px;
+
+  /* Font family */
+  --font-sans: "Apercu", -apple-system, system-ui, sans-serif;
+
+  /* Easing */
+  --ease-custom: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+body {
+  min-height: 100vh;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+#site {
+  min-height: 100vh;
+}
+
+/* Wave animation — applied to the namaste emoji on load and hover. */
+.wave {
+  animation: wave 1s both;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  from {
+    transform: none;
+  }
+  15% {
+    transform: translate3d(-20%, 0, 0) rotate3d(0, 0, 1, -10deg);
+  }
+  30% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 7deg);
+  }
+  45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -10deg);
+  }
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 5deg);
+  }
+  75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -2deg);
+  }
+  to {
+    transform: none;
+  }
+}
+
+/* Smooth link transitions */
+a {
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #0a192f;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #495670;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #64ffda;
+}
