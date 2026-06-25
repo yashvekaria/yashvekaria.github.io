@@ -62,7 +62,8 @@ export const metadata: Metadata = {
         url: SITE.ogImage,
         width: 1200,
         height: 630,
-        alt: "Yash Vekaria — Front-end Software Engineer",
+        type: "image/png",
+        alt: `${SITE.name} — ${SITE.jobTitle}`,
       },
     ],
   },
@@ -86,16 +87,11 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [
-      { url: SITE.icon },
-      { url: SITE.icon, type: "image/png" },
-    ],
-    shortcut: SITE.icon,
-    apple: SITE.icon,
-    other: {
-      rel: "apple-touch-icon-precomposed",
-      url: SITE.icon,
-    },
+    // favicon.ico is auto-wired by the src/app/favicon.ico convention; this
+    // adds a square PNG for modern browsers and Apple touch icon. No duplicate
+    // entries and no obsolete `apple-touch-icon-precomposed`.
+    icon: [{ url: SITE.icon, type: "image/png", sizes: "166x166" }],
+    apple: { url: SITE.icon, sizes: "166x166", type: "image/png" },
   },
 };
 

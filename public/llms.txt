@@ -1,0 +1,19 @@
+# Yash Vekaria
+
+> Yash Vekaria is a design-minded front-end software engineer focused on building beautiful interfaces and experiences with React, Next.js, and TypeScript.
+
+## About
+
+- Name: Yash Vekaria
+- Role: Front-end Software Engineer
+- Employer: Avesta Technologies (http://www.avestatechnologies.com/)
+- Skills: Front-end Development, JavaScript, TypeScript, React, React Native, Next.js, HTML, CSS, Sass, UI/UX Design, Web Performance, Accessibility
+- Contact: yashvekaria@gmail.com
+- Website: https://yash.vekaria.in
+
+## Links
+
+- GitHub: https://github.com/yashvekaria
+- LinkedIn: https://www.linkedin.com/in/yash-vekaria-71459025/
+- Twitter/X: https://twitter.com/yashvekaria
+- Instagram: https://www.instagram.com/yashvekaria/

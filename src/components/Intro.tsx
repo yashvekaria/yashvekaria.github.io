@@ -34,6 +34,7 @@ const Intro = () => {
         Namaste!
         <span
           className="wave-hand inline-block align-middle ml-2.5 cursor-pointer text-[28px] sm:text-[34px] md:text-[40px]"
+          role="img"
           aria-label="namaste hands"
           onMouseEnter={handleWaveHover}
           onMouseLeave={handleWaveLeave}
@@ -42,10 +43,11 @@ const Intro = () => {
         </span>
       </h1>
 
-      <h2 className="text-base font-light leading-relaxed text-text-secondary-light dark:text-text-secondary-dark max-w-content sm:text-lg md:text-xl">
+      <p className="text-base font-light leading-relaxed text-text-secondary-light dark:text-text-secondary-dark max-w-content sm:text-lg md:text-xl">
         I&apos;m{" "}
         <span
           className="inline-block align-middle mr-1.5 text-[28px] sm:text-[34px] md:text-[40px]"
+          role="img"
           aria-label="technologist"
         >
           👨‍💻
@@ -55,13 +57,13 @@ const Intro = () => {
         </span>
         , a design-minded front-end software engineer focused on building
         beautiful interfaces &amp; experiences
-      </h2>
+      </p>
 
-      <h3 className="flex flex-wrap items-center gap-y-1 text-contact font-normal sm:text-sm md:text-base">
+      <p className="flex flex-wrap items-center gap-y-1 text-contact font-normal sm:text-sm md:text-base">
         <span>Get in touch </span>
         <span
           className="inline-block align-middle mx-2.5 ml-1.5 text-[28px] sm:text-[34px] md:text-[40px]"
-          aria-label="pointing right"
+          aria-hidden="true"
         >
           👉
         </span>{" "}
@@ -75,7 +77,7 @@ const Intro = () => {
             yashvekaria@gmail.com
           </a>
         </span>
-      </h3>
+      </p>
     </header>
   );
 };

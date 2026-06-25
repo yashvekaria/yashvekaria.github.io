@@ -7,8 +7,13 @@ export const SITE = {
     "Yash Vekaria is a design-minded front-end software engineer focused on building beautiful interfaces & experiences with React, Next.js, and TypeScript.",
   email: "yashvekaria@gmail.com",
   jobTitle: "Front-end Software Engineer",
-  ogImage: "/img/og.png",
-  icon: "/img/logo/logo1.png",
+  // Static link-preview card shipped as a real .png so GitHub Pages serves it
+  // with an image/png Content-Type (extensionless metadata routes are served as
+  // application/octet-stream, which social scrapers reject).
+  ogImage: "/og.png",
+  // Real square portrait used for the schema.org Person depiction.
+  headshot: "/img/headshot.jpg",
+  icon: "/img/logo/logo3.png",
   employer: {
     name: "Avesta Technologies",
     url: "http://www.avestatechnologies.com/",
@@ -46,8 +51,19 @@ export const STRUCTURED_DATA = {
       "@type": "Person",
       "@id": `${SITE.url}/#person`,
       name: SITE.name,
+      givenName: "Yash",
+      familyName: "Vekaria",
+      knowsLanguage: ["en"],
       url: SITE.url,
-      image: `${SITE.url}${SITE.ogImage}`,
+      image: {
+        "@type": "ImageObject",
+        "@id": `${SITE.url}/#headshot`,
+        url: `${SITE.url}${SITE.headshot}`,
+        contentUrl: `${SITE.url}${SITE.headshot}`,
+        width: 400,
+        height: 400,
+        caption: SITE.name,
+      },
       jobTitle: SITE.jobTitle,
       email: `mailto:${SITE.email}`,
       description: SITE.description,
@@ -68,6 +84,20 @@ export const STRUCTURED_DATA = {
       inLanguage: "en-US",
       publisher: { "@id": `${SITE.url}/#person` },
       author: { "@id": `${SITE.url}/#person` },
+    },
+    {
+      // Declares the homepage document and that it is primarily about Yash —
+      // Google's canonical pattern for a personal profile page.
+      "@type": "ProfilePage",
+      "@id": `${SITE.url}/#webpage`,
+      url: SITE.url,
+      name: SITE.title,
+      description: SITE.description,
+      inLanguage: "en-US",
+      isPartOf: { "@id": `${SITE.url}/#website` },
+      about: { "@id": `${SITE.url}/#person` },
+      mainEntity: { "@id": `${SITE.url}/#person` },
+      primaryImageOfPage: { "@id": `${SITE.url}/#headshot` },
     },
   ],
 };

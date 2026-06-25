@@ -46,10 +46,31 @@
   --ease-custom: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
+/* Match native UI (form controls, scrollbars) to the active theme. The theme
+   is class-driven (.dark on <html>), so track it here rather than via media. */
+:root {
+  color-scheme: light;
+}
+.dark {
+  color-scheme: dark;
+}
+
 body {
   min-height: 100vh;
   font-size: 20px;
   line-height: 1.6;
+}
+
+/* Visible keyboard focus for interactive elements (WCAG 2.4.7). */
+a:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-link-light);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.dark a:focus-visible,
+.dark [tabindex]:focus-visible {
+  outline-color: var(--color-link-dark);
 }
 
 #site {
@@ -89,6 +110,14 @@ body {
 /* Smooth link transitions */
 a {
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Honour reduced-motion: stop the namaste wave for users who opt out. Scoped to
+   .wave so link/theme transitions are unaffected. */
+@media (prefers-reduced-motion: reduce) {
+  .wave {
+    animation: none !important;
+  }
 }
 
 /* Custom scrollbar */

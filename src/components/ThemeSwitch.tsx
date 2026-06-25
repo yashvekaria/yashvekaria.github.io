@@ -47,9 +47,10 @@ const ThemeSwitch = () => {
         />
         <label
           htmlFor="switch"
-          className={`cursor-pointer indent-[-9999px] w-[45px] h-[25px] bg-[#888] block rounded-full relative transition-all duration-250 ease-custom
-            after:content-[''] after:absolute after:top-[3px] after:left-[3px] after:w-[19px] after:h-[19px] after:bg-white after:rounded-full after:transition-all after:duration-250 after:ease-custom
-            peer-checked:bg-[#bae67e] peer-checked:after:left-[calc(100%-3px)] peer-checked:after:translate-x-[-100%]`}
+          className={`cursor-pointer indent-[-9999px] w-[45px] h-[25px] bg-[#888] border border-[#5a5a5a] box-border block rounded-full relative transition-all duration-250 ease-custom
+            after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:w-[19px] after:h-[19px] after:bg-white after:rounded-full after:transition-all after:duration-250 after:ease-custom
+            peer-checked:bg-[#5a9e2f] peer-checked:after:left-[calc(100%-2px)] peer-checked:after:translate-x-[-100%]
+            peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-link-light dark:peer-focus-visible:outline-link-dark`}
         >
           Toggle
         </label>
