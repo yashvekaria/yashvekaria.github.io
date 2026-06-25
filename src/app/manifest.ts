@@ -9,7 +9,9 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: SITE.name,
     description: SITE.description,
     start_url: "/",
-    display: "standalone",
+    // "browser" (not "standalone") so browsers don't show an install / add-to-
+    // home-screen prompt — this is a regular site, not an installable app.
+    display: "browser",
     background_color: "#0a192f",
     theme_color: "#0a192f",
     icons: [
